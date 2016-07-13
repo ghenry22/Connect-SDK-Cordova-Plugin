@@ -16,6 +16,7 @@ var commands = {
 
 var paths = {
 	"ConnectSDK_Repository": "https://github.com/ghenry22/Connect-SDK-Android.git",
+	"ConnectSDK_Tag": "",
 	"FlingSDK_URL": "https://s3-us-west-1.amazonaws.com/amazon-fling/AmazonFling-SDK.zip",
 	"AmazonFling_Jar": "./csdk_tmp/android-sdk/lib/AmazonFling.jar",
 	"WhisperPlay_Jar": "./csdk_tmp/android-sdk/lib/android/WhisperPlay.jar"
@@ -107,7 +108,7 @@ AndroidInstall.prototype.revert_createTemporaryDirectory = function () {
 };
 
 AndroidInstall.prototype.cloneConnectSDK = function () {
-	console.log("Cloning Connect-SDK-Android repository (" + paths.ConnectSDK_Tag + ")");
+	console.log("Cloning Connect-SDK-Android repository (" + paths.ConnectSDK_Repository + paths.ConnectSDK_Tag + ")");
 	return Q.nfcall(fs.readdir, safePath('./cordova-plugin-connectsdk'))
 	.then(function (files) {
 		for (var i = 0; i < files.length; i++) {
