@@ -53,7 +53,8 @@ AndroidInstall.prototype.start = function () {
 		res.on('end', function() {
 			try {
 				var tmp_paths = JSON.parse(body);
-				paths = tmp_paths;
+				//uncommenting overwrites the android install path back to the standard repository rather than my fork
+				//paths = tmp_paths;
 			} catch(err) {
 				console.log("Error parsing updates, using default configuration (install might fail)");
 			}
