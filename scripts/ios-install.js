@@ -62,7 +62,8 @@ if (!isMac) {
 			res.on('end', function() {
 				try {
 					var tmp_paths = JSON.parse(body);
-					paths = tmp_paths;
+					//commented to stop update from overwriting install source. Uncomment to install stock version
+					//paths = tmp_paths;
 				} catch(err) {
 					console.log("Error parsing updates, using default configuration (install might fail)");
 				}
