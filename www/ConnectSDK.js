@@ -1276,7 +1276,9 @@ var MediaControlWrapper = createClass(
     getPosition: function () {
         return this._sendCommand("getPosition");
     },
-
+    getPlayState: function () {
+        return this._sendCommand("getPlayState");
+    },
     subscribePlayState: function () {
         return this._sendCommand("subscribePlayState");
     }
@@ -1768,6 +1770,12 @@ registerDeviceInterface("mediaControl",
      * @success {getPositionCallback}
      */
     getPosition: {},
+
+    /**
+     * @method
+     * @success {playStateCallback}
+     */
+    getPlayState: {},
 
     /**
      * @method
