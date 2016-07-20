@@ -1277,6 +1277,10 @@ var MediaControlWrapper = createClass(
         return this._sendCommand("getPosition");
     },
 
+    getPlayState: function () {
+        return this._sendCommand("getPlayState");
+    },
+
     subscribePlayState: function () {
         return this._sendCommand("subscribePlayState");
     }
@@ -1720,6 +1724,17 @@ registerDeviceInterface("externalInputControl",
  */
 
 /**
+ * @callback getPlayStateCallback
+ * @param {string} playState - One of:
+ * - "unknown"
+ * - "idle"
+ * - "playing"
+ * - "paused"
+ * - "buffering"
+ * - "finished"
+ */
+
+/**
  * @callback playStateCallback
  * @param {string} playState - One of:
  * - "unknown"
@@ -1768,6 +1783,12 @@ registerDeviceInterface("mediaControl",
      * @success {getPositionCallback}
      */
     getPosition: {},
+
+    /**
+     * @method
+     * @success {getPlayStateCallback}
+     */
+    getPlayState: {},
 
     /**
      * @method

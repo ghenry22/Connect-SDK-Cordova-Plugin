@@ -206,6 +206,7 @@ var Capabilities = {
         Duration: "MediaControl.Duration",
         PlayState: {
             toString: function () { return "MediaControl.PlayState"; },
+            Get: "MediaControl.PlayState"
             Subscribe: "MediaControl.PlayState.Subscribe"
         },
         Position: "MediaControl.Position"
