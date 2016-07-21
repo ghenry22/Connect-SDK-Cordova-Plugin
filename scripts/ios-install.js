@@ -25,7 +25,7 @@ if (!isMac) {
 		"FlingSDK_URL": "https://s3-us-west-1.amazonaws.com/amazon-fling/AmazonFling-SDK.zip",
 		"AmazonFling_Framework": "./csdk_tmp/ios-sdk/frameworks/AmazonFling.framework",
 		"Bolts_Framework": "./csdk_tmp/ios-sdk/frameworks/third_party_framework/Bolts.framework",
-		"GoogleCastSDK_URL": "https://redirector.gvt1.com/edgedl/chromecast/sdk/ios/GoogleCastSDK-2.10.4-Release-ios-default-External.zip",
+		"GoogleCastSDK_URL": "https://www.dropbox.com/s/40wrvt3obousvxl/GoogleCastSDK-2.10.4-Release-ios-default-External.zip?dl=0",
 		"GoogleCast_Framework": "./csdk_tmp/GoogleCastSDK-2.10.4-Release/GoogleCast.framework"
 	};
 
