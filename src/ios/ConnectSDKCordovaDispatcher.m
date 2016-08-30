@@ -529,10 +529,12 @@ static id orNull (id obj)
 
 - (void) mediaControl_getPosition:(JSCommand*)command
 {
-    id<MediaControl> mediaControl = [self getMediaControl:command];
-    if (!mediaControl) return;
-    
-    [mediaControl getPositionWithSuccess:command.successWithDouble failure:command.failure];
+    [command.plugin.commandDelegate runInBackground:^{
+      id<MediaControl> mediaControl = [self getMediaControl:command];
+      if (!mediaControl) return;
+
+      [mediaControl getPositionWithSuccess:command.successWithDouble failure:command.failure];
+    }];
 }
 
 - (void) mediaControl_getPlayState:(JSCommand*)command
